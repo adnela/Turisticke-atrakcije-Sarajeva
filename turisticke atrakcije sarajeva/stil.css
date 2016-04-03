@@ -59,7 +59,7 @@ background-size:cover;
 
 
 
-.Novost1
+/*.Lijevo
 {
 	
 	text-align:center;
@@ -75,8 +75,8 @@ background-size:cover;
 	color:#cc0000;
 	font-style:bold;
 
-}
-.Novost1 img
+}*/
+.Lijevo img
 {
 	width:80%;
 	height:60%;
@@ -106,8 +106,8 @@ background-size:cover;
 	position:static;
 }
 
-
-.Novost2
+/*
+.Desno
 {
   
   position:static;
@@ -127,20 +127,111 @@ background-size:cover;
 
 
 
-}
-.Novost2 img
+}*/
+.Desno img
 {
 	width:30vw;
 	height:20vw;
 	position:static;
 }
-.Novost2dol
-{ width:45vw;
+
+
+
+.Lijevo
+{
+		text-align:center;
+	font:bold;
+	float:left;
+	width:45vw;
+	height:40vw;
+	border:10px;
+	border-color:#cc0000;
+	border-style:solid;
+	margin-top:-41vw;
+	margin-left:0%;
+	margin-right:50%;
+	position:static;
+	font-family:verdana;
+	
+}
+.Desno
+{	width:45vw;
 	height:40vw;
 	
 	text-align:center;
 	float:left;
-	margin-top:-41vw;
+	margin-top:0vw;
+	margin-left: 51%;
+	margin-right:0%;
+		border:10px;
+	border-color:#cc0000;
+	border-style:solid;
+	position:static;
+	color:#cc0000;
+   font-family:verdana;
+	
+}
+.Novost7
+{
+		text-align:center;
+	font:bold;
+	float:left;
+	width:45vw;
+	height:20vw;
+	border:10px;
+	border-color:#cc0000;
+	border-style:solid;
+	margin-top:5vw;
+	margin-left:0%;
+	margin-right:50%;
+	position:static;
+	font-family:verdana;
+	
+}
+.Novost8
+{
+	width:45vw;
+	height:20vw;
+	
+	text-align:center;
+	float:left;
+	margin-top:-21.5vw;
+	margin-left: 51vw;
+	margin-right:0%;
+		border:10px;
+	border-color:#cc0000;
+	border-style:solid;
+	position:static;
+	color:#cc0000;
+   font-family:verdana;
+	
+}
+.Novost9
+{
+			text-align:center;
+	font:bold;
+	float:left;
+	width:45vw;
+	height:20vw;
+	border:10px;
+	border-color:#cc0000;
+	border-style:solid;
+	margin-top:5vw;
+	margin-left:0%;
+	margin-right:50%;
+	position:static;
+	font-family:verdana;
+	
+	
+}
+.Novost10
+{
+	width:45vw;
+	height:20vw;
+	
+	text-align:center;
+	float:left;
+	margin-top:-21.5vw;
 	margin-left: 51vw;
 	margin-right:0%;
 		border:10px;
@@ -150,13 +241,6 @@ background-size:cover;
 	color:#cc0000;
    font-family:verdana;
 }
-.Novost2dol img
-{
-	width:30vw;
-	height:20vw;
-	position:static;
-}
-
 .srce
 {
 	position:relative;
@@ -230,4 +314,14 @@ margin-top:5px;
 	margin-top:0px;
 	margin-left:0px;
 	
+}
+#filterD
+{
+	float:right;
+	background-color:black;
+}
+.vrijeme
+{
+	color:black;
+	background-color:white;
 }
