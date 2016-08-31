@@ -1,3 +1,32 @@
+<?php
+
+session_start();
+if(!isset($_SESSION["userLogged"] || $_SESSION["userLogged"]=="0")
+{
+	header("Location:TuristickeAtrakcijeSarajeva.html");
+	exit;
+}
+date_default_timezone_set('Europe/Sarajevo');
+
+function SpasiNovost()
+{
+	$path= "novosti.csv";
+	$file= fopen($path,"a");
+	$naslov= $_POST["naslov"];
+	$sadrzaj=$_POST["sadrzaj"];
+	$datum= date("d.m.Y H:i:s");
+	$text=$naslov.",".$sadrzaj.",".$datum.PHP_EOL;
+	fwrite($file, $text);
+	fclose($file);
+}
+
+if(isset($_POST["sacuvaj"]))
+{
+	SpasiNovost();
+	header("Location:TuristickeAtrakcijeSarajeva.html");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

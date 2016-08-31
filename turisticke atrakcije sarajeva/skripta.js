@@ -57,6 +57,76 @@ function objavljenoPrije(datum)
 }
 
 
+function Filtriraj()
+{
+	var desni=[].slice.call(document.getElementsByClassName("Desno"));
+	var lijevi=[].slice.call(document.getElementsByClassName("Lijevo"));
+	var novosti=document.querySelectorAll(".SveNovosti");
+	var trenutni= new Date();
+	var izabrano=document.getElementById("filter").value;
+
+
+ if( izabrano==2)
+	{
+		
+		for (var i = novosti.length - 1; i >= 0; i--) {
+			var dan = new Date(novosti[i].getElementsByClassName('datum')[0].innerHTML).getDate();
+			var mjesec = new Date(novosti[i].getElementsByClassName('datum')[0].innerHTML).getMonth();
+			var godina = new Date(novosti[i].getElementsByClassName('datum')[0].innerHTML).getFullYear();
+			if(mjesec == trenutni.getMonth() && godina == trenutni.getFullYear() && dan == trenutni.getDate()) novosti[i].style.display = 'block';
+			else novosti[i].style.display = 'none';
+		}
+		
+	}
+	
+	if (izabrano==3)
+	{
+		novosti[i].style.display = 'block';
+	}
+	
+	if ( izabrano==4)
+	{
+		for (var i = novosti.length - 1; i >= 0; i--) {
+			var mjesec = new Date(novosti[i].getElementsByClassName('datum')[0].innerHTML).getMonth();
+			var godina = new Date(novosti[i].getElementsByClassName('datum')[0].innerHTML).getFullYear();
+			if(mjesec == trenutni.getMonth() && godina == trenutni.getFullYear()) novosti[i].style.display = 'block';
+			else novosti[i].style.display = 'none';
+		}
+	}
+	
+	if( izabrano == 1)
+	{
+			for (var i = novosti.length - 1; i >= 0; i--) {
+			novosti[i].style.display = 'block';
+		}
+
+	}
+}
+	/*else if(kljucnaRijec=="sedmica" || kljucnaRijec=="dan" && filer==2)
+	{
+		vijesti[i].style.display="block";
+	}
+	else if(kljucnaRijec=="mjesec" || kljucnaRijec=="sedmica" || kljucnaRijec=="dan" && filter==3)
+	{
+		vijesti[i].style.display="block";
+	}
+	else
+	{
+		vijesti[i].style.display="none";
+	}
+	}
+	
+	
+}
+function KljucnaRijec(rijeci)
+{
+	if(rijeci.includes("sat") || rijeci.includes("minut") || rijeci.includes("sekund")) return "dan";
+	else if(rijeci.includes("1 sedmice") || rijeci.includes("dan")) return "sedmica";
+	else if(rijeci.includes("2 sedmice") || rijeci.includes("3 sedmice") || rijeci.includes("4 sedmice")) return "mjesec";
+	else return "sve";
+}
+*/
+
 
 
 

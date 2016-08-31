@@ -1,0 +1,52 @@
+<!DOCTYPE HTML >
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<TITLE>Turističke atrakcije Sarajeva|Login</TITLE>
+<link rel="stylesheet" type="text/css" href="stil.css">
+<script src="js/login.js"></script>
+</HEAD>
+<BODY>
+<h1><br><br>Kontaktirajte nas..</h1>
+<form action="Login.php" method="post">
+<div class="login-frame">
+<label>Username</label><br>
+<input type="text" name="username"> <br>
+<label>Password</label><br>
+<input type="password" name="password"> <br>
+<input type="submit" name="posalji" value="Login"><br>
+</div>
+</form>
+<?php 
+$_message='';
+$_ok= false;
+if(isset($_POST["submit"]) && !empty($_POST["username"]) && !empty($_POST["username"]))
+{
+$_username=$_POST["username"];
+$_password=$_POST["password"];
+
+$_adnela=file["podaci.csv"];
+foreach($_adnela as $_admin)
+{
+$_adnela= explode(',',$_admin);
+if($_adnela[0]==$_username && $_adnela[1]== md5($_password)
+{
+$_SESSION["Login"]=true;
+$_message="";
+$_ok=true;
+}
+}
+if(!$_ok)
+{
+$_message="Greška!";
+
+}
+}
+if($_ok)
+{
+header("Location:administrator.php");} ?>
+
+
+
+</BODY>
+</HTML>

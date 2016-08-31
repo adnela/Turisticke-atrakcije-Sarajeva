@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <TITLE>Turističke atrakcije Sarajeva|Kontakt</TITLE>
 <link rel="stylesheet" type="text/css" href="KontaktStil.css">
-
+<script type="text/javascript" src="ValidacijaKontakt.js"></script>
 </HEAD>
 <body>
 	<div id="menu">
@@ -25,14 +25,25 @@
 
 <h1><br><br>Kontaktirajte nas..</h1>
 <form>
-<label>Ime i prezime:</label><br>
-<input type="text" name="imeiprezime"> <br>
-<label>Pitanje</label><br>
-<textarea rows="5" cols="40"></textarea><br>
+<label>Ime:</label><br>
+<input type="text" id="ime" onkeyup="validirajIme()" required><br>
+<label>Prezime:</label><br>
+<input type="text" id="prezime" onkeyup="validirajPrezime()"required><br>
+
+<label >Pitanje</label><br>
+<textarea rows="5" cols="40" id="pitanje"></textarea><br>
 <label>Email</label><br>
-<input type="email" name="email" required><br>
-<label>Broj telefona</label><br>
-<input type="tel" name="tel" id="tel" required><br>
+<input type="email" id="email" onkeyup=emailValidacija() required><br>
+
+<div>
+			<input type="radio" id="1"  name="operater" value="BiH"> Bosna i Hercegovina
+			<input type="radio" id="2"  name="operater" value="Hr"> Hrvatska
+			<input type="radio" id="3"  name="operater" value="Srb"> Srbija
+			<input type="radio" id="4"  name="operater" value="Cg"> Crna Gora
+		
+		</div>
+		<label>Broj telefona</label><br>
+<input type="tel" name="tel" id="tel" placeholder="xxx-xxx-xxx"onkeyup="telefonValidacija()" required><br>
 <input type="submit" name="posalji" value="Pošalji"><br>
 
 </form>
